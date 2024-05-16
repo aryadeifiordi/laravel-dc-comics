@@ -1,9 +1,10 @@
 <?php
 
+use App\Http\Controllers\ComicController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('comics.index');
 });
 
-Route::resource('comics', ComicController::class);
+Route::resource('comics', ComicController::class)->only(['create', 'index', 'show']);
