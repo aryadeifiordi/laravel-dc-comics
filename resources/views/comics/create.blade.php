@@ -16,6 +16,26 @@
 </head>
 
 <body>
+    <div class="container">
+        <h1>Edit Comic</h1>
+        <form action="{{ route('comics.update', $comic->id) }}" method="POST">
+            @csrf
+            @method('PUT')
+            <div>
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" value="{{ $comic->title }}">
+            </div>
+            <div>
+                <label for="author">Author</label>
+                <input type="text" id="author" name="author" value="{{ $comic->author }}">
+            </div>
+            <div>
+                <label for="year">Year</label>
+                <input type="number" id="year" name="year" value="{{ $comic->year }}">
+            </div>
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
 
 </body>
 
