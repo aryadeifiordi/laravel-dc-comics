@@ -16,6 +16,10 @@
 </head>
 
 <body>
+    <h1>{{ $comic->title }}</h1>
+    <p><strong>Author:</strong> {{ $comic->author }}</p>
+    <p><strong>Year:</strong> {{ $comic->year }}</p>
+
 
 </body>
 

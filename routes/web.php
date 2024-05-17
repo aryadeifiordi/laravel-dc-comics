@@ -8,3 +8,4 @@ Route::get('/', function () {
 });
 
 Route::resource('comics', ComicController::class)->only(['create', 'index', 'show']);
+Route::get('/comics/{comic}', [ComicController::class, 'show'])->name('comics.show');
